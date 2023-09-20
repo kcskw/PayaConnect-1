@@ -42,6 +42,29 @@ INDUSTRY SUPPORT BY PROCESSOR
 
 ## Endpoint Actions
 _Note_: **Fields marked required must be present. If these filed are not correct you will receive a 422 error of "[field name] cannot be blank".**
+
+Example of error:
+```
+{
+    "errors": {
+        "transaction_id": [
+            "not qualified for level 3"
+        ],
+        "level3_data": [
+            {
+                "line_items": [
+                    {
+                        "tax_rate": [
+                            "Tax Rate cannot be blank."
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
+```
+
 ### Create Record
 
 `POST /v2/transactionlevel3s`
